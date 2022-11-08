@@ -3,34 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>web camea test</title>
+  <title>WEBカメラの映像を表示</title>
 </head>
 <body>
  <div class="reader">
      <video id="js-video" class="reader-video"></video>
  </div>
- <script src="app.js"></script>
+
+    <div id="js-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-cnt">
+                <span class="modal-title">result</span>
+                <textarea
+                    id="js-result"
+                    class="modal-result"
+                    value=""
+                    readonly
+                /></textarea>
+            </div>
+            <a href="" id="js-link" class="modal-btn" target="_blank">
+                open
+            </a>
+            <button id="js-copy" class="modal-btn" target="_blank">
+                copy
+            </button>
+            <button type="button" id="js-modal-close" class="modal-btn">
+                close
+            </button>
+        </div>
+    </div>
+
+    <div id="js-unsupported" class="unsupported">
+        <p class="unsupported-title">Sorry!</p>
+        <p>Unsupported browser</p>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html> 
-
-<!-- <body>
-    <div>
-        <h1>web camera</h1>
-        <div>
-            <video id="video"></video>
-        </div>
-    </div>  
-    <script>
-        const video = document.getElementById("video")
-        navigator.mediaDevices.getUserMedia({
-            video: true,
-            audio: false,
-        }).then(stream => {
-            video.srcObject = stream;
-            video.play()
-        }).catch(e => {
-          console.log(e)
-        })
-    </script>  
-</body>
-</html> -->
