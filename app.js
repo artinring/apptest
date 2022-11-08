@@ -20,6 +20,7 @@ const checkImage = () => {
      })
 }
 
+
 navigator.mediaDevices
     .getUserMedia({
         audio: false,
