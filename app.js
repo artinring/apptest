@@ -1,12 +1,3 @@
-if(!navigator.mediaDevices) {
-    document.querySelector('#js-unsupported').classList.add('is-show')
-}
-
-if(window.BarcodeDetector == undefined) {
-    console.log('Barcorde Detector is not supported by this browser.')
-    document.querySelector('#js-unsupported').classList.add('is-show')
-}
-
 const video = document.getElementById("js-video")
 
 const checkImage = () => {
